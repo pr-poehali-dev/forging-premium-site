@@ -529,6 +529,7 @@ export default function Index() {
               {[
                 { icon: "MapPin", text: "Калининград, собственное производство", sub: "Выезд по всей Калининградской области" },
                 { icon: "Phone", text: "+7 (906) 213-19-19", sub: "Пн–Пт: 9:00–18:00" },
+                { icon: "Phone", text: "+7 (996) 522-87-14", sub: "Пн–Пт: 9:00–18:00" },
                 { icon: "MessageCircle", text: "Telegram / WhatsApp", sub: "Быстрый ответ в мессенджерах" },
               ].map((c, i) => (
                 <div key={i} style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
