@@ -200,7 +200,7 @@ export default function Index() {
             <h1
               className="animate-fade-in"
               style={{
-                fontFamily: "'Cormorant Garamond', serif",
+                fontFamily: "'Montserrat', sans-serif",
                 fontSize: "clamp(52px, 9vw, 100px)",
                 fontWeight: 300,
                 lineHeight: 1.0,
