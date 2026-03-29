@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Icon from "@/components/ui/icon";
 
+const IMG_LOGO = "https://cdn.poehali.dev/projects/f9283abc-b515-424e-949a-d4808b18b858/bucket/fe76e6f2-c022-46bc-a071-7c5df2e40b22.jpg";
 const IMG_FORGE = "https://cdn.poehali.dev/projects/f9283abc-b515-424e-949a-d4808b18b858/files/33a172b0-0e4b-4103-a213-cf90c90e0307.jpg";
 const IMG_STAIRCASE = "https://cdn.poehali.dev/projects/f9283abc-b515-424e-949a-d4808b18b858/files/c135d3c0-867d-4c2b-9746-8424ee51a966.jpg";
 const IMG_GATE = "https://cdn.poehali.dev/projects/f9283abc-b515-424e-949a-d4808b18b858/files/a705e744-5a25-4eae-bfe0-5e9735530281.jpg";
@@ -128,13 +129,8 @@ export default function Index() {
         }}
       >
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between", height: 72 }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 12, cursor: "pointer" }} onClick={() => scrollTo("hero")}>
-            <div style={{ width: 32, height: 32, border: "1px solid var(--forge-gold)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <div style={{ width: 14, height: 14, background: "var(--forge-gold)" }} />
-            </div>
-            <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 22, letterSpacing: "0.15em", fontWeight: 500, color: "var(--forge-cream)" }}>
-              БЕЛЫЙ КУБ
-            </span>
+          <div style={{ display: "flex", alignItems: "center", cursor: "pointer" }} onClick={() => scrollTo("hero")}>
+            <img src={IMG_LOGO} alt="Белый Куб" style={{ height: 44, width: "auto", filter: "brightness(0) invert(1)" }} />
           </div>
 
           <div style={{ display: "flex", gap: 36, alignItems: "center" }} className="hidden md:flex">
@@ -618,11 +614,8 @@ export default function Index() {
       {/* FOOTER */}
       <footer style={{ borderTop: "1px solid rgba(201,168,76,0.15)", padding: "44px 24px" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 20 }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-            <div style={{ width: 28, height: 28, border: "1px solid var(--forge-gold)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <div style={{ width: 12, height: 12, background: "var(--forge-gold)" }} />
-            </div>
-            <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 18, letterSpacing: "0.15em", fontWeight: 500 }}>БЕЛЫЙ КУБ</span>
+          <div>
+            <img src={IMG_LOGO} alt="Белый Куб" style={{ height: 38, width: "auto", filter: "brightness(0) invert(1)", opacity: 0.7 }} />
           </div>
           <p style={{ fontSize: 12, color: "rgba(245,240,232,0.3)", textAlign: "center", margin: 0 }}>
             © 2024 Мастерская художественной ковки «Белый Куб» · Калининград
