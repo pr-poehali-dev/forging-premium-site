@@ -6,86 +6,46 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
-
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
-
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-
     --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
-
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
-
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
-
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
-
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
+    --radius: 0rem;
 
-    --radius: 0.5rem;
+    /* Brand colors */
+    --forge-black: #0a0a0a;
+    --forge-dark: #111111;
+    --forge-charcoal: #1a1a1a;
+    --forge-steel: #2a2a2a;
+    --forge-iron: #3d3d3d;
+    --forge-grey: #666666;
+    --forge-silver: #999999;
+    --forge-mist: #cccccc;
+    --forge-cream: #f5f0e8;
+    --forge-gold: #c9a84c;
+    --forge-gold-light: #e8c96a;
+    --forge-gold-dark: #a07830;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
@@ -94,8 +54,258 @@
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground;
+    font-family: "Golos Text", sans-serif;
+    background-color: var(--forge-black);
+    color: var(--forge-cream);
   }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Cormorant Garamond", serif;
+  }
+}
+
+/* Noise texture overlay */
+.noise-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Gold line decoration */
+.gold-line {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--forge-gold),
+    transparent
+  );
+}
+
+/* Section heading style */
+.section-label {
+  font-family: "Golos Text", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--forge-gold);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes scaleX {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+.gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--forge-gold-dark),
+    var(--forge-gold-light),
+    var(--forge-gold-dark)
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--forge-black);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--forge-gold-dark);
+}
+
+/* Nav link hover */
+.nav-link {
+  position: relative;
+  color: var(--forge-mist);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--forge-gold);
+  transition: width 0.3s ease;
+}
+.nav-link:hover {
+  color: var(--forge-gold);
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Portfolio card hover */
+.portfolio-card {
+  overflow: hidden;
+  position: relative;
+}
+.portfolio-card img {
+  transition: transform 0.7s ease;
+}
+.portfolio-card:hover img {
+  transform: scale(1.05);
+}
+.portfolio-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 10, 10, 0.9) 0%,
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.portfolio-card:hover .overlay {
+  opacity: 1;
+}
+
+/* Service card */
+.service-card {
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  transition:
+    border-color 0.3s,
+    background 0.3s;
+  background: rgba(26, 26, 26, 0.6);
+}
+.service-card:hover {
+  border-color: rgba(201, 168, 76, 0.5);
+  background: rgba(26, 26, 26, 0.9);
+}
+
+/* Advantage card */
+.advantage-card {
+  border-top: 1px solid rgba(201, 168, 76, 0.3);
+  padding-top: 1.5rem;
+  transition: border-color 0.3s;
+}
+.advantage-card:hover {
+  border-top-color: var(--forge-gold);
+}
+
+/* Metal texture background */
+.metal-bg {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(42, 42, 42, 0.8) 0%,
+      rgba(17, 17, 17, 0.95) 50%,
+      rgba(42, 42, 42, 0.8) 100%
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.01) 2px,
+      rgba(255, 255, 255, 0.01) 4px
+    );
+}
+
+/* Form inputs */
+.forge-input {
+  background: rgba(42, 42, 42, 0.5);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  color: var(--forge-cream);
+  padding: 14px 18px;
+  width: 100%;
+  font-family: "Golos Text", sans-serif;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+.forge-input:focus {
+  border-color: var(--forge-gold);
+}
+.forge-input::placeholder {
+  color: var(--forge-grey);
+}
+
+/* Step number */
+.step-number {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 80px;
+  font-weight: 300;
+  color: rgba(201, 168, 76, 0.12);
+  line-height: 1;
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  pointer-events: none;
 }
