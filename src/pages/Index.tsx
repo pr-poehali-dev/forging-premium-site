@@ -130,7 +130,7 @@ export default function Index() {
       >
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between", height: 72 }}>
           <div style={{ display: "flex", alignItems: "center", cursor: "pointer" }} onClick={() => scrollTo("hero")}>
-            <img src={IMG_LOGO} alt="Белый Куб" style={{ height: 44, width: "auto", filter: "brightness(0) invert(1)" }} />
+            <img src={IMG_LOGO} alt="Белый Куб" style={{ height: 44, width: "auto", mixBlendMode: "screen" }} />
           </div>
 
           <div style={{ display: "flex", gap: 36, alignItems: "center" }} className="hidden md:flex">
@@ -615,7 +615,7 @@ export default function Index() {
       <footer style={{ borderTop: "1px solid rgba(201,168,76,0.15)", padding: "44px 24px" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 20 }}>
           <div>
-            <img src={IMG_LOGO} alt="Белый Куб" style={{ height: 38, width: "auto", filter: "brightness(0) invert(1)", opacity: 0.7 }} />
+            <img src={IMG_LOGO} alt="Белый Куб" style={{ height: 38, width: "auto", mixBlendMode: "screen", opacity: 0.7 }} />
           </div>
           <p style={{ fontSize: 12, color: "rgba(245,240,232,0.3)", textAlign: "center", margin: 0 }}>
             © 2024 Мастерская художественной ковки «Белый Куб» · Калининград
