@@ -202,7 +202,7 @@ export default function Index() {
               style={{
                 fontFamily: "'Montserrat', sans-serif",
                 fontSize: "clamp(52px, 9vw, 100px)",
-                fontWeight: 300,
+                fontWeight: 700,
                 lineHeight: 1.0,
                 letterSpacing: "-0.02em",
                 margin: "0 0 16px",
