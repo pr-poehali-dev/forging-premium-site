@@ -3,6 +3,7 @@ import Icon from "@/components/ui/icon";
 
 const IMG_LOGO = "https://cdn.poehali.dev/projects/f9283abc-b515-424e-949a-d4808b18b858/bucket/fe76e6f2-c022-46bc-a071-7c5df2e40b22.jpg";
 const IMG_FORGE = "https://cdn.poehali.dev/projects/f9283abc-b515-424e-949a-d4808b18b858/bucket/571926af-158a-4319-b012-4c43179f4abb.jpg";
+const IMG_HERO = "https://cdn.poehali.dev/projects/f9283abc-b515-424e-949a-d4808b18b858/bucket/93bb4fda-5713-4207-99ed-cc626ff0b8fd.jpg";
 const IMG_STAIRCASE = "https://cdn.poehali.dev/projects/f9283abc-b515-424e-949a-d4808b18b858/files/c135d3c0-867d-4c2b-9746-8424ee51a966.jpg";
 const IMG_GATE = "https://cdn.poehali.dev/projects/f9283abc-b515-424e-949a-d4808b18b858/files/a705e744-5a25-4eae-bfe0-5e9735530281.jpg";
 const IMG_CANOPY = "https://cdn.poehali.dev/projects/f9283abc-b515-424e-949a-d4808b18b858/files/9eba0af1-a9e8-443f-9cb8-0baab28236e4.jpg";
@@ -185,7 +186,7 @@ export default function Index() {
       {/* HERO */}
       <section id="hero" style={{ position: "relative", minHeight: "100vh", display: "flex", alignItems: "center", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0 }}>
-          <img src={IMG_FORGE} alt="Кузница" style={{ width: "100%", height: "100%", objectFit: "cover", opacity: 0.35 }} />
+          <img src={IMG_HERO} alt="Кузница" style={{ width: "100%", height: "100%", objectFit: "cover", opacity: 0.45 }} />
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(10,10,10,0.93) 0%, rgba(10,10,10,0.65) 50%, rgba(10,10,10,0.88) 100%)" }} />
         </div>
 
