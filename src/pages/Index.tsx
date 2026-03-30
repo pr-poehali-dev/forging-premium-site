@@ -5,7 +5,7 @@ const IMG_LOGO = "https://cdn.poehali.dev/projects/f9283abc-b515-424e-949a-d4808
 const IMG_FORGE = "https://cdn.poehali.dev/projects/f9283abc-b515-424e-949a-d4808b18b858/bucket/571926af-158a-4319-b012-4c43179f4abb.jpg";
 const IMG_HERO = "https://cdn.poehali.dev/projects/f9283abc-b515-424e-949a-d4808b18b858/bucket/93bb4fda-5713-4207-99ed-cc626ff0b8fd.jpg";
 const IMG_STAIRCASE = "https://cdn.poehali.dev/projects/f9283abc-b515-424e-949a-d4808b18b858/files/c135d3c0-867d-4c2b-9746-8424ee51a966.jpg";
-const IMG_GATE = "https://cdn.poehali.dev/projects/f9283abc-b515-424e-949a-d4808b18b858/files/a705e744-5a25-4eae-bfe0-5e9735530281.jpg";
+const IMG_GATE = "https://cdn.poehali.dev/projects/f9283abc-b515-424e-949a-d4808b18b858/bucket/1ddfca4c-7757-4595-b758-1ef2d8a8141f.jpg";
 const IMG_CANOPY = "https://cdn.poehali.dev/projects/f9283abc-b515-424e-949a-d4808b18b858/files/9eba0af1-a9e8-443f-9cb8-0baab28236e4.jpg";
 
 const services = [
